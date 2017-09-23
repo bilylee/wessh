@@ -26,7 +26,9 @@ python wessh.py
 3. scan the QR code to login your wechat account.
 
 4. now you can send bash commands in your filehelper just like in a ssh.
+
 ![demo image](demo.PNG)
+
 **CAUTION**: you can only send commands by your phone since WeChat doesn't allow multiple logins in different devices. Use other devices(like computer or web browsers), this script will exit. 
 
 ## Advanced usage
