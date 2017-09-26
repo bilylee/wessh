@@ -52,6 +52,7 @@ get_log_file_path.cur_ind = 0
 
 @itchat.msg_register([itchat.content.TEXT])
 def chat_trigger(msg):
+  if msg['ToUserName'] != 'filehelper': return
   try:
     msg_text = msg['Text'].strip()
     cmd = msg_text.split(' ')
