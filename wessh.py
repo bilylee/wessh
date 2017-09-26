@@ -64,7 +64,8 @@ def chat_trigger(msg):
                'dl filepath: download file\n'
                'list: list frequently used commands\n')
     elif cmd[0] == 'list':
-      send_msg('\n'.join(FREQUENT_CMD))
+      for c in FREQUENT_CMD:
+        send_msg(c)
     elif cmd[0] == 'dl':
       if len(cmd) == 2:
         send_file(cmd[1])
