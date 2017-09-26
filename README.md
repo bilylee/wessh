@@ -35,6 +35,10 @@ python wessh.py
 - you can get help message by using the `help` command.
 - commands that doesn't belong to the `SIMPLE_OUTPUT_CMD` list will save their stdout and stderr to a log file. You can get this log file by use `log` command if this is the lastest command, or `log index_number` where index_number is the interger number right below your sent command.
 - use `dl filepath` to download files from your server. 
-
-
-
+- Maybe you want this script to start automatically on boot, and respawn if it crashes. Try this:
+  + install [Node.js](https://nodejs.org/en/)
+  + install [forever](https://github.com/foreverjs/forever)
+  + in your `/etc/rc.local` or an init script, call: 
+  ```python
+    forever start -c python /path/to/wessh.py
+  ```
